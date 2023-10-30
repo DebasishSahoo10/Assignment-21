@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { WardSlice } from "./WardSlice";
-import { PatientSlice } from "./PatientSlice";
+import { EventSlice } from "./EventSlice";
+import { VolunteerSlice } from "./VolunteerSlice";
 
 export const store = configureStore({
-    reducer : {
-        Ward : WardSlice.reducer,
-        Patient : PatientSlice.reducer
-    }
-})
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+  reducer: {
+    Event: EventSlice.reducer,
+    Volunteer: VolunteerSlice.reducer,
+  },
+});
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
